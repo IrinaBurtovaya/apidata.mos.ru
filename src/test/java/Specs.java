@@ -14,8 +14,7 @@ public class Specs {
     public static RequestSpecification request = with()
             .baseUri("https://apidata.mos.ru/v1/datasets")
             .formParam("api_key", config.apiKey())
-            .log().uri()
-            .log().body()
+            .log().all()
             .contentType(JSON);
 
     public static ResponseSpecification response = new ResponseSpecBuilder()
