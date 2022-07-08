@@ -4,6 +4,7 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.aeonbits.owner.ConfigFactory;
 
+import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.with;
 
 public class Specs {
@@ -13,8 +14,8 @@ public class Specs {
     public static RequestSpecification request = with()
             .baseUri("https://apidata.mos.ru/v1/datasets")
             .formParam("api_key", config.apiKey())
-            .log().all()
-            .contentType("application/x-www-form-urlencoded");
+            .log().all();
+    //.contentType("application/x-www-form-urlencoded");
 
     public static ResponseSpecification response = new ResponseSpecBuilder()
             .expectStatusCode(200)
