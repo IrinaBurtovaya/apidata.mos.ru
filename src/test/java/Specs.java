@@ -17,6 +17,7 @@ public class Specs {
             .log().all()
             .contentType("application/x-www-form-urlencoded");
 
+
     public static ResponseSpecification response = new ResponseSpecBuilder()
             .expectStatusCode(200)
             .build();
