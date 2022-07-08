@@ -88,5 +88,4 @@ public class ApiDataTests {
                         .extract().jsonPath().getList(".", Dataset.class);
         Assertions.assertTrue(datasets.stream().anyMatch(x -> x.getCaption().contains("Дома культуры и клубы")));
     }
-
 }
