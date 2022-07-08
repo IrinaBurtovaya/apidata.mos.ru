@@ -15,7 +15,7 @@ public class Specs {
             .baseUri("https://apidata.mos.ru/v1/datasets")
             .formParam("api_key", config.apiKey())
             .log().all()
-            .contentType(JSON);
+            .contentType("application/x-www-form-urlencoded");
 
     public static ResponseSpecification response = new ResponseSpecBuilder()
             .expectStatusCode(200)
